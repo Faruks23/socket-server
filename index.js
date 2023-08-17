@@ -7,7 +7,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIO(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://spoken-english-65d22.web.app",
     methods: ["GET", "POST"],
   },
 });
@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 5001; // Use the provided PORT environment vari
 // Allow requests from any origin
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://spoken-english-65d22.web.app",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
   })
